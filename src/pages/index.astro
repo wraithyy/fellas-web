@@ -3,18 +3,28 @@ import Layout from "../layouts/Layout.astro";
 
 import { Button } from "../components/Button";
 import { Card } from "../components/Card";
+const trainings = await Astro.glob("./../trainings/*.mdx");
+console.log(trainings);
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <Button text="test" client:idle />
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
+    <h1>Welcome to <span class="bg-fellas-green">Astro</span></h1>
     <p class="instructions">
       To get started, open the directory <code>src/pages</code> in your project.<br
       />
       <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
     </p>
     <ul role="list" class="link-card-grid">
+      {
+        trainings.map((training) => (
+          <li>
+            {training.frontmatter.title}
+            {training.frontmatter.description}
+            {training.default}
+          </li>
+        ))
+      }
       <Card
         href="https://docs.astro.build/"
         title="Documentation"
@@ -37,6 +47,8 @@ import { Card } from "../components/Card";
       />
     </ul>
   </main>
+
+  <Button text="test" client:load />
 </Layout>
 
 <style>
