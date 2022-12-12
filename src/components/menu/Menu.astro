@@ -2,6 +2,7 @@
 import MenuItem from "./MenuItem.astro";
 import Socials from "./Socials.astro";
 import { Button } from "../Button";
+import { Image } from "@astrojs/image/components";
 
 import logo from "../../assets/img/GF-logo.png";
 ---
@@ -11,7 +12,7 @@ import logo from "../../assets/img/GF-logo.png";
 >
   <div class="flex">
     <div class="logo h-10 w-10 py-2.5 mr-5">
-      <img src={logo} class="h-10 w-10" alt="Logo" />
+      <Image src={logo} class="h-10 w-10" alt="Logo" />
     </div>
     <MenuItem title="Jak začít" href="/how-to-start" />
     <MenuItem title="Jak začít" href="/how-to-start" />
