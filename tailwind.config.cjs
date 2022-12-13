@@ -17,6 +17,11 @@ module.exports = {
         },
       },
     },
+
+    screens: {
+      tablet: "640px",
+      desktop: "1024px",
+    },
   },
 
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
