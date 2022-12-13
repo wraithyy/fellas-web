@@ -2,7 +2,7 @@ import { Input } from "./Input";
 
 export const Form = () => {
   return (
-    <div className="w-full max-w-xs h-full">
+    <div className="w-full h-full">
       <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 h-full">
         <div className="flex flex-col items-left justify-between">
           <h2 className="text-xl font-semibold leading-6 mb-4 text-left">
