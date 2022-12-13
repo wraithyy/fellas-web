@@ -13,10 +13,18 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind({
-    // Example: Provide a custom path to a Tailwind config file
-    config: {
-      path: "./tailwind.config.cjs"
-    }
-  }), mdx(), image()]
+  integrations: [
+    react(),
+    tailwind({
+      // Example: Provide a custom path to a Tailwind config file
+      config: {
+        path: "./tailwind.config.cjs",
+      },
+    }),
+    mdx(),
+    image({
+      cacheDir: "./.cache/image",
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+  ],
 });
