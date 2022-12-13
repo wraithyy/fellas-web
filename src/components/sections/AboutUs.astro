@@ -1,25 +1,22 @@
 ---
 import aboutUs from "../../assets/img/GF-postavy.png";
 import { Image } from "@astrojs/image/components";
+import Content from "../../layouts/Content.astro";
 ---
 
-<div class="bg-white text-center font-sans pt-10 py-2 flex justify-center">
-  <div
-    class="flex flex-1 items-end flex-wrap lg:flex-nowrap justify-around max-w-6xl"
-  >
-    <div class="text-container prose text-center lg:text-left mb-12">
-      <h1>O nás</h1>
-      <p>
-        Máme vizi. Vytvořit místo, kam budou moci přijít naši rodiče a my je
-        rozhýbeme a naučíme je o sebe starat, aby měli krásné stáří. Místo, kam
-        budou moci chodit mladí lidé a my jim pomůžeme vytvořit si správné
-        pohybové vzorce pro celý život. Místo, kam budou chodit vrcholoví
-        sportovci a budou moci posouvat své výkony zas o něco dál. S touto vizí
-        jsme otevřeli naše prostory.
-      </p>
-    </div>
-    <div>
-      <Image src={aboutUs} alt="O nás" class="w-full" format="webp" />
-    </div>
+<Content className="bg-white !pb-0">
+  <div class="text-container prose text-center lg:text-left mb-12">
+    <h1>O nás</h1>
+    <p>
+      Máme vizi. Vytvořit místo, kam budou moci přijít naši rodiče a my je
+      rozhýbeme a naučíme je o sebe starat, aby měli krásné stáří. Místo, kam
+      budou moci chodit mladí lidé a my jim pomůžeme vytvořit si správné
+      pohybové vzorce pro celý život. Místo, kam budou chodit vrcholoví
+      sportovci a budou moci posouvat své výkony zas o něco dál. S touto vizí
+      jsme otevřeli naše prostory.
+    </p>
   </div>
-</div>
+  <div>
+    <Image src={aboutUs} alt="O nás" class="w-full" format="webp" />
+  </div>
+</Content>

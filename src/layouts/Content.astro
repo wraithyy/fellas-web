@@ -1,0 +1,11 @@
+---
+const { className } = Astro.props;
+---
+
+<div class={`${className} text-center font-sans p-12 flex justify-center`}>
+  <div
+    class="flex flex-1 items-end flex-wrap lg:flex-nowrap justify-around max-w-6xl"
+  >
+    <slot />
+  </div>
+</div>
