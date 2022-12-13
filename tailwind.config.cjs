@@ -7,6 +7,15 @@ module.exports = {
       fontFamily: {
         sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
       },
+      keyframes: {
+        fadeInOut: {
+          "0%": { opacity: 0 },
+          "40%": { opacity: 0 },
+          "60%": { opacity: 1 },
+          "80%": { opacity: 1 },
+          "100%": { opacity: 0 },
+        },
+      },
     },
   },
 
