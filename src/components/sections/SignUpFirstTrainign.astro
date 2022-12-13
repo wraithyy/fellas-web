@@ -1,19 +1,60 @@
 ---
 import Content from "../../layouts/Content.astro";
+import { Button } from "../Button";
 ---
 
 <Content className="bg-white">
-  <div>
-    <div class="prose w-full mb-10">
-      <h1>Jak se přihlásit na svůj první trénink?</h1>
+  <div class="w-full">
+    <div class="prose w-full max-w-full flex justify-center  mb-10">
+      <h1 class="w-max ">Jak se přihlásit na svůj první trénink?</h1>
     </div>
-    <div class="flex flex-1 justify-between">
+    <div class="flex flex-1 justify-between w-full">
       <div class="">
-        <h3 class="text-center text-3xl font-bold uppercase">
-          1<br />
+        <h3 class="text-center text-4xl font-bold uppercase mb-6">
+          <span class="text-8xl">1</span><br />
           <span>Krok</span>
         </h3>
+        <div class="bg-black prose prose-invert text-sm w-52 p-5">
+          Klikni na tlačítko „REZERVACE“, poté klikni v pravém horním rohu na tlačítko „Přihlásit“. Dále zmáčkni vpravo dole „Registrace“.
+        </div>
+        <div class="mt-12 flex justify-center">
+          <Button text="Rezervace" />
+        </div>  
       </div>
+      <div class="">
+        <h3 class="text-center text-3xl font-bold uppercase mb-6">
+          <span class="text-8xl">2</span><br />
+          <span>Krok</span>
+        </h3>
+        <div class="bg-black prose prose-invert text-sm w-52 p-5">
+          Vyplň své údaje a vytvoř si svůj účet. PS: Doporučujeme kliknout na „Odebírat informační emaily“. Zbytečné žádné nepíšeme, když ti nějaký pošleme, bude to důležité.
+        </div>
+      </div>
+      <div class="">
+        <h3 class="text-center text-3xl font-bold  uppercase mb-6">
+          <span class="text-8xl">3</span><br />
+          <span>Krok</span>
+        </h3>
+        <div class="bg-black prose prose-invert text-sm w-52 p-5">
+          Pro dokončení registrace, klikni na odkaz ve tvém e-mailu.
+        </div>
+      </div>
+      <div class="">
+        <h3 class="text-center text-3xl font-bold  uppercase mb-6">
+          <span class="text-8xl">4</span><br />
+          <span>Krok</span>
+        </h3>
+        <div class="bg-black prose prose-invert text-sm w-52 p-5">
+          Nyní si vyber svou první hodinu, klikni na ní, a poté klikni na „Rezervovat“ a jako způsob platby vyber „První rezervace zdarma“.
+        </div>
+      </div>
+    </div>
+    <div class="prose  text-center font-sans max-w-none mt-12">
+      <p class="font-bold">Přihlášení na trénink pomocí benefitu Multisport</h1>
+      <p>
+        Pokud vlastníš MultiSportku, přihlas se na hodinu stejně, jak je popsáno výše. Po příchodu na sportoviště řekni obsluze na baru, že vlastníš MultiSport a ona ti tuto možnost zadá ke tvému účtu. Bude ještě potřeba, aby sis na svůj účet nahrál kredity v hodnotě 100 Kč (v hotovosti na baru, on-line platbou, převodem). Tato částka slouží jako depozit, pro případ, kdyby ses na trénink nedostavil. Bez této minimální částky nelze vybrat možnost platby „Multisport“. Tato částka je kdykoliv vratitelná.
+      </p>
+
     </div>
   </div>
 </Content>
