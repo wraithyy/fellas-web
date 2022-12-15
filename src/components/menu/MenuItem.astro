@@ -6,9 +6,11 @@ export interface Props {
 const { href, title } = Astro.props;
 ---
 
-<a
-  href={href}
-  class="w-auto h-full no-underline hover:underline px-3 flex items-center"
->
-  {title}
-</a>
+<li>
+  <a
+    href={href}
+    class="w-auto h-full no-underline hover:underline px-3 flex items-center"
+  >
+    {title}
+  </a>
+</li>
