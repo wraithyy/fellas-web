@@ -28,7 +28,7 @@ jobs:
 
 
       - name: Upload ftp
-        uses: GenieTim/ftp-action@v4.0.1
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
