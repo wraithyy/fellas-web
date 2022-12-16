@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,12 +27,6 @@ jobs:
           
           name: CI -> Deploy to My website
 
-  deploy:
-    name: Deploy to FTP
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      # Here is the deployment action
       - name: Upload from public_html via FTP
         uses: airvzxf/ftp-deployment-action@latest
         with:
