@@ -1,7 +1,7 @@
 name: CI Deploy to FTP
-on: 
+on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
@@ -18,16 +18,17 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install # will run `yarn install` command
-          
+
       - name: Build production bundle
         uses: borales/actions-yarn@v4
-        with:
-          cmd: build # will run `yarn build` command
-        
-      - name: Upload ftp
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         env:
           BASENAME: "/new"
+        with:
+          cmd: build # will run `yarn build` command
+
+      - name: Upload ftp
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
