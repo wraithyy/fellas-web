@@ -28,5 +28,5 @@ export default defineConfig({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
   ],
-  base: "/new",
+  base: import.meta.env.BASENAME || "/",
 });
