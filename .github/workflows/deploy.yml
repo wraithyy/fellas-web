@@ -26,6 +26,8 @@ jobs:
         
       - name: Upload ftp
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        env:
+          BASENAME: "/new"
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
