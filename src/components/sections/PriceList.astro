@@ -1,0 +1,65 @@
+---
+import Content from "../../layouts/Content.astro";
+import { Button } from "../Button";
+import { Image } from "@astrojs/image/components";
+import multisport from "../../assets/img/multisport.png";
+---
+
+<Content className="bg-white">
+  <div class="w-full">
+    <div class="prose w-full max-w-full flex justify-center mb-10">
+      <h1 class="w-full">Ceník</h1>
+    </div>
+    <div class="flex flex-1 justify-center w-full flex-col desktop:flex-row">
+      <div
+        class="flex flex-col w-96 self-center mb-2 border border-gray-300 desktop:self-auto"
+      >
+        <div class="bg-gray-200 text-sm w-full px-6 py-10">
+          <p class="text-2xl mb-1">Vedené hodiny</p>
+          <h3 class="text-6xl">150 Kč</h3>
+        </div>
+        <div class="bg-white border-t border-gray-300 p-6">
+          <p class="text-base">1x vstup na vedené lekce</p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col w-96 self-center mb-2 border border-gray-300 desktop:self-auto"
+      >
+        <div class="bg-gray-200 text-sm w-full px-6 py-10">
+          <p class="text-2xl mb-1">Vedené hodiny</p>
+          <h3 class="text-6xl">1.190 Kč</h3>
+        </div>
+        <div class="bg-white border-t border-gray-300 p-6">
+          <p class="text-base">10x vstup na vedené lekce</p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col w-96 self-center mb-2 border border-gray-300 desktop:self-auto"
+      >
+        <div class="bg-gray-200 text-sm w-full px-6 py-10">
+          <p class="text-2xl mb-1">Vedené hodiny</p>
+          <h3 class="text-6xl">1.590 Kč</h3>
+        </div>
+        <div class="bg-white border-t border-gray-300 p-6">
+          <p class="text-base">Neomezený vstup na 1 měsíc</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="prose text-container flex flex-col text-center font-sans max-w-none mt-12"
+    >
+      <div class="flex justify-center">
+        <Button text="Detailní ceník" />
+      </div>
+      <p>*Pro studenty sleva -20% na všechny permanentky</p>
+    </div>
+    <div
+      class="prose text-container flex flex-col text-center font-sans max-w-none mt-12"
+    >
+      <p class="font-bold mb-0">Využíváme benefitů Multisport</p>
+      <div class="flex justify-center">
+        <Image src={multisport} alt="Multisport" format="webp" class="w-56" />
+      </div>
+    </div>
+  </div>
+</Content>
