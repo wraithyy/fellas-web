@@ -19,6 +19,7 @@ export default defineConfig({
       // Example: Provide a custom path to a Tailwind config file
       config: {
         path: "./tailwind.config.cjs",
+        applyBaseStyles: false,
       },
     }),
     mdx(),
@@ -27,4 +28,5 @@ export default defineConfig({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
   ],
+  base: "/new",
 });
