@@ -1,4 +1,4 @@
-name: CI Build ->Deploy to NEW
+name: CI Deploy to FTP
 on: 
   push:
     branches: [ master ]
@@ -23,10 +23,7 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build # will run `yarn build` command
-          
-          name: CI -> Deploy to My website
-
-
+        
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
         with:
