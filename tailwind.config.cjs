@@ -17,6 +17,9 @@ module.exports = {
           "100%": { opacity: 0 },
         },
       },
+      colors: {
+        fellas: "#5b5e4b",
+      },
     },
 
     screens: {
