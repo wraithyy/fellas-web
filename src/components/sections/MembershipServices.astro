@@ -1,0 +1,47 @@
+---
+import Content from "../../layouts/Content.astro";
+import { Icon } from "astro-icon";
+---
+
+<Content className="bg-fellas">
+  <div class="prose prose-invert text-center font-sans max-w-none">
+    <h2>Další služby</h2>
+    <p>Nemáš Fellas členství?</p>
+    <div class="flex flex-row">
+      <div class="item flex-1 p-2.5"></div>
+      <div class="item flex-1 p-2.5">
+        <div class="flex justify-center">
+          <Icon class="w-12" name="fa-solid:box" />
+        </div>
+        <p>
+          Chceš vlastní boxík? Cena na měsíc za <strong
+            >celý box je 100 Kč</strong>
+        </p>
+      </div>
+
+      <div class="item flex-1 p-2.5">
+        <div class="flex justify-center">
+          <Icon class="w-12" name="fa-solid:shower" />
+        </div>
+        <p>
+          Šatny a sprchy lze využít i za <strong
+            >jednorázový poplatek 40 Kč</strong
+          >.
+        </p>
+      </div>
+      <div class="item flex-1 p-2.5">
+        <div class="flex justify-center">
+          <Icon class="w-12" name="fa-solid:person-booth" />
+        </div>
+        <p>Zapůjčení ručníku – <strong>20 Kč</strong></p>
+      </div>
+      <div class="item flex-1 p-2.5"></div>
+    </div>
+    <p class="">
+      PS: Pokud máš možnost se například sprchovat v práci, tak pro tebe super.
+      V případě, že sprchu necháš na doma, tak si jen spočítej, že jedna sprcha
+      tě vyjde přibližně na 15-20 kč. Takže pokud trénuješ 3x až 4x týdně, pak
+      za sprchu doma měsíčně zaplatíš něco kolem 250-300 kč.
+    </p>
+  </div>
+</Content>
