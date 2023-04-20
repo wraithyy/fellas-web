@@ -1,8 +1,11 @@
 ---
-const { className } = Astro.props;
+const { className, id } = Astro.props;
 ---
 
-<div class={`${className} text-center font-sans p-12 flex justify-center`}>
+<div
+  class={`${className} text-center font-sans p-12 flex justify-center`}
+  id={id}
+>
   <div
     class="flex flex-1 items-end flex-wrap desktop:flex-nowrap justify-around max-w-6xl"
   >

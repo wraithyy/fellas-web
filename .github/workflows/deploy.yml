@@ -1,0 +1,37 @@
+name: CI Deploy to FTP
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+
+      - name: Build production bundle
+        uses: borales/actions-yarn@v4
+        env:
+          BASENAME: "/new"
+        with:
+          cmd: build # will run `yarn build` command
+
+      - name: Upload ftp
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ./new/

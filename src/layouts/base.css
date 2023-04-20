@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@tailwind base;
+@layer base {
+  html {
+    @apply font-sans;
+  }
+}
+@tailwind components;
+@tailwind utilities;
