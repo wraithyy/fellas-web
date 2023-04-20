@@ -12,21 +12,29 @@ import PriceList from "../components/sections/PriceList.astro";
 import Parking from "../components/sections/Parking.astro";
 import MembershipBackground from "../components/sections/MembershipBackground.astro";
 import MembershipServices from "../components/sections/MembershipServices.astro";
+import Lessons from "../components/sections/Lessons.astro";
+import Contacts from "../components/sections/Contacts.astro";
+import Partners from "../components/sections/Partners.astro";
+import Footer from "../components/footer/Footer.astro";
 
 //console.log(trainings);
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="GoodFellas Hybrid Gym">
   <main>
     <Slider />
     <Info />
     <AboutUs />
     <HowStart />
     <SignUpFirstTrainign />
+    <Lessons />
     <PriceList />
     <MembershipBackground />
     <MembershipServices />
     <Parking />
+    <Contacts />
+    <Partners />
+    <Footer />
   </main>
   <!-- <Button text="test" client:load /> -->
 </Layout>

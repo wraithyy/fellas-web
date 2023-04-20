@@ -1,0 +1,36 @@
+---
+import Content from "../../layouts/Content.astro";
+import { Image } from "@astrojs/image/components";
+import map from "../../assets/img/mapka.png";
+---
+
+<Content className="bg-black">
+  <div class="flex flex-col items-center">
+    <div class="prose prose-invert mb-20">
+      <h2>Kontakty</h2>
+      <p>Jsme v centru Liberce, hned naproti OC Plaza</p>
+    </div>
+    <div class="flex flex-col desktop:flex-row desktop:h-96 items-center">
+      <div class="prose prose-invert px-6">
+        <h4>Kontakní údaje</h4>
+        <p class="my-0"><strong>GoodFellas Hybrid Gym</strong></p>
+        <p class="my-0"><strong>Adresa:</strong>Palachova 504/7, Liberec</p>
+        <p class="my-0"><strong>Email:</strong>info@crossfitliberec.cz</p>
+      </div>
+      <div class="px-6">
+        <Image src={map} alt="mapa" format="webp" class="max-w-sm" />
+      </div>
+      <div class="prose prose-invert px-6">
+        <h4>Můžeš zavolat</h4>
+        <p class="my-0">... a klidně nám hned tykej</p>
+        <p class="my-0"><strong>Mobil:</strong>+420 739 566 103</p>
+        <h4>Otevírací doba</h4>
+        <p class="my-0">
+          <strong>Pondělí – Pátek:</strong>6h – 8:30h / 14h – 20h
+        </p>
+        <p class="my-0"><strong>Sobota:</strong>8h – 12h</p>
+        <p class="my-0"><strong>Neděle:</strong>16h – 19h</p>
+      </div>
+    </div>
+  </div>
+</Content>

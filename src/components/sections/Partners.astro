@@ -1,0 +1,27 @@
+---
+import Content from "../../layouts/Content.astro";
+import { Image } from "@astrojs/image/components";
+import lpStudio from "../../assets/img/ref-7.jpg";
+import forwardFitness from "../../assets/img/ref-4.jpg";
+import strongGear from "../../assets/img/ref-5.jpg";
+import workout from "../../assets/img/workout.jpg";
+---
+
+<Content className="bg-white relative">
+  <div
+    class="flex flex-col desktop:flex-row desktop:justify-between desktop:w-full"
+  >
+    <div class="flex-1 flex justify-center">
+      <Image src={lpStudio} alt="LP Studio" />
+    </div>
+    <div class="flex-1 flex justify-center">
+      <Image src={forwardFitness} alt="Forward Fitness" />
+    </div>
+    <div class="flex-1 flex justify-center">
+      <Image src={strongGear} alt="Strong Gear" />
+    </div>
+    <div class="flex-1 flex justify-center">
+      <Image src={workout} alt="Workout" />
+    </div>
+  </div>
+</Content>
