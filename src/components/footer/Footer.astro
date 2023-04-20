@@ -1,0 +1,19 @@
+---
+import Content from "../../layouts/Content.astro";
+const year = new Date().getFullYear();
+---
+
+<Content className="bg-fellas p-6">
+  <div class="prose prose-invert text-center">
+    <p class="text-xs my-0">
+      <a href="https://goodfellasgym.cz/wp-content/uploads/2022/10/PR.pdf"
+        >Provozní řád</a
+      > |
+      <a href="https://goodfellasgym.cz/wp-content/uploads/2020/01/vop.pdf"
+        >Všeobecné obchodní podmínky</a
+      >
+    </p>
+    <p class="text-xs my-0">Všechna práva vyhrazena © 2018-{year}</p>
+    <p class="text-xs my-0">GoodFellas Liberec s.r.o.</p>
+  </div>
+</Content>
