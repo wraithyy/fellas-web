@@ -1,0 +1,35 @@
+---
+import { Image } from "@astrojs/image/components";
+
+import { Button } from "../Button";
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  alt: string;
+}
+
+const { title, description, image, alt } = Astro.props;
+---
+
+<div
+  class="max-w-xs bg-white border border-gray-200 shadow group hover:scale-105 ease-in-out duration-300"
+>
+  <>
+    <div class="overflow-hidden">
+      <Image
+        class="object-fill group-hover:scale-125 ease-in-out duration-300 m-0"
+        src={import(image)}
+        alt={alt}
+      />
+    </div>
+    <div class="p-5">
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        {description}
+      </p>
+      <div class="flex justify-center">
+        <Button text="Více info" />
+      </div>
+    </div>
+  </>
+</div>
