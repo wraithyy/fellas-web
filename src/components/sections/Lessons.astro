@@ -1,19 +1,30 @@
 ---
 import Content from "../../layouts/Content.astro";
+import LessonCard from "../cards/LessonCard.astro";
+import { getCollection } from "astro:content";
+const funkcniFitness = await getCollection("lessons");
 ---
 
 <Content className="bg-fellas">
   <div
     class="prose prose-invert w-full max-w-full flex justify-center mb-10 flex-col"
   >
-    <h2>Co u nás najdeš za lekce?</h2>
-    <div class="flex gap-3">
-      <div class="flex flex-col flex-1 border shadow-outline">
-        Funkční fitness 1
-      </div>
-      <div class="flex flex-col flex-1 border shadow-xl">Funkční fitness 2</div>
-      <div class="flex flex-col flex-1 border shadow-2xl">GF Kondička</div>
+    <h2>Máme 8 typů tréninků</h2>
+    <div class="flex justify-center flex-wrap gap-3 mt-3">
+      {
+        funkcniFitness
+          .sort((a, b) => a.data.order - b.data.order)
+          .map((item) => {
+            return (
+              <LessonCard
+                title={item.data.title}
+                description={item.data.description}
+                image={item.data.image}
+                alt={item.data.alt}
+              />
+            );
+          })
+      }
     </div>
-    <h2>Toto jsou naše 3 hlavní lekce!</h2>
   </div>
 </Content>
