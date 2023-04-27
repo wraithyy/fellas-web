@@ -1,0 +1,70 @@
+---
+import Content from "../../layouts/Content.astro";
+import { Image } from "@astrojs/image/components";
+const images = await Astro.glob("../../assets/img/gallery/*.jpg");
+
+// const images = [
+//   "https://www.kindacode.com/wp-content/uploads/2022/07/flower-4.jpeg",
+//   "https://www.kindacode.com/wp-content/uploads/2022/07/flower-3.jpeg",
+//   "https://www.kindacode.com/wp-content/uploads/2022/07/flower-2.jpeg",
+//   "https://www.kindacode.com/wp-content/uploads/2022/07/flower-1.jpeg",
+// ];
+---
+
+<Content className="bg-fellas !pb-0" id="aboutUs">
+  <div class="flex flex-col items-center">
+    <div class="prose prose-invert text-center font-sans max-w-none">
+      <h1>Proč cvičit v GoodFellas?</h1>
+    </div>
+    <div class="p-20 grid grid-cols-1  gap-5 tablet:grid-cols-3  desktop:grid-cols-4">
+      {
+        images.map((image) => (
+            <span onclick=`showModal('${image.default.src}')`>
+             <Image
+            class="w-full h-full object-cover cursor-pointer"
+            src={image.default}
+            alt="Flower"
+          />
+          </span>
+        ))
+      }
+    </div>
+
+    <!-- The Modal -->
+    <div
+      id="modal"
+      class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center"
+      onclick="closeModal()"
+    >
+      <!-- The close button -->
+      <span
+        class="fixed z-90 top-20 right-8 text-white text-5xl font-bold cursor-pointer"
+        onclick="closeModal()">&times;</span
+      >
+
+      <!-- A big image will be displayed here -->
+      <img id="modal-img" class="object-cover desktop:w-[80%] w-full" />
+    </div>
+
+    <script defer>
+      // Get the modal by id
+      const modal = document.getElementById("modal");
+
+      // Get the modal image tag
+      const modalImg = document.getElementById("modal-img");
+      const body = document.getElementsByTagName("body")[0];
+      // this function is called when a small image is clicked
+      function showModal(src) {
+        modal.classList.remove("hidden");
+        body.classList.add("overflow-hidden");
+        modalImg.src = src;
+      }
+
+      // this function is called when the close button is clicked
+      function closeModal() {
+        modal.classList.add("hidden");
+        body.classList.remove("overflow-hidden");
+      }
+    </script>
+  </div>
+</Content>
