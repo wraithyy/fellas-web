@@ -16,10 +16,7 @@ const funkcniFitness = await getCollection('lessons')
           .map((item) => {
             return (
               <LessonCard
-                title={item.data.title}
-                description={item.data.description}
-                image={item.data.image}
-                alt={item.data.alt}
+              item={item}      
               />
             )
           })

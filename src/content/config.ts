@@ -4,7 +4,8 @@ const lessonCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     image: z.string(),
-    alt: z.string()
+    alt: z.string(),
+    slug: z.string(),
   })
 })
 
