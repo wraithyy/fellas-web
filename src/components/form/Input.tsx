@@ -1,7 +1,7 @@
 type InputProps = {
-  label: string;
-  type: string;
-};
+  label: string
+  type: string
+}
 
 export const Input = ({ label, type }: InputProps) => {
   return (
@@ -14,5 +14,5 @@ export const Input = ({ label, type }: InputProps) => {
         />
       </label>
     </div>
-  );
-};
+  )
+}

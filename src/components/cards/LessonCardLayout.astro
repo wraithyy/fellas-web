@@ -1,14 +1,13 @@
 ---
-import { Image } from "@astrojs/image/components";
-import { Button } from "../Button";
+import { Image } from '@astrojs/image/components'
+import { Button } from '../Button'
 const {
-  frontmatter: { title, description, image },
-} = Astro.props;
+  frontmatter: { title, description, image }
+} = Astro.props
 ---
 
 <div
-  class="max-w-sm bg-white border border-gray-200 shadow group hover:scale-105 ease-in-out duration-300"
->
+  class="max-w-sm bg-white border border-gray-200 shadow group hover:scale-105 ease-in-out duration-300">
   <>
     <div class="overflow-hidden">
       <Image

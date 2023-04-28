@@ -1,10 +1,10 @@
 ---
-import MenuItem from "./MenuItem.astro";
-import Socials from "./Socials.astro";
-import { Button } from "../Button";
-import { Image } from "@astrojs/image/components";
+import MenuItem from './MenuItem.astro'
+import Socials from './Socials.astro'
+import { Button } from '../Button'
+import { Image } from '@astrojs/image/components'
 
-import logo from "/public/img/GF-logo.png";
+import logo from '/public/img/GF-logo.png'
 ---
 
 <!-- <div class="flex items-center">
@@ -15,8 +15,7 @@ import logo from "/public/img/GF-logo.png";
 </div> -->
 <header>
   <nav
-    class="flex flex-wrap items-center justify-between w-full py-4 px-4 bg-white fixed z-50 bg-opacity-90"
-  >
+    class="flex flex-wrap items-center justify-between w-full py-4 px-4 bg-white fixed z-50 bg-opacity-90">
     <div class="order-1">
       <a href="#">
         <Image src={logo} class="h-10 w-10" alt="Logo" />
@@ -25,34 +24,26 @@ import logo from "/public/img/GF-logo.png";
     <div class="flex items-center order-2 desktop:order-3">
       <button class="relative group desktop:hidden" id="menu-button">
         <div
-          class="relative flex overflow-hidden items-center justify-center w-[50px] h-[50px] transform transition-all ring-0 duration-200"
-        >
+          class="relative flex overflow-hidden items-center justify-center w-[50px] h-[50px] transform transition-all ring-0 duration-200">
           <div
-            class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden"
-          >
+            class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
             <div
-              class="bg-black h-[2px] w-7 transform transition-all duration-300 origin-left hamburger-line"
-            >
+              class="bg-black h-[2px] w-7 transform transition-all duration-300 origin-left hamburger-line">
             </div>
             <div
-              class="bg-black h-[2px] w-7 rounded transform transition-all duration-300 delay-75 hamburger-line"
-            >
+              class="bg-black h-[2px] w-7 rounded transform transition-all duration-300 delay-75 hamburger-line">
             </div>
             <div
-              class="bg-black h-[2px] w-7 transform transition-all duration-300 origin-left delay-150 hamburger-line"
-            >
+              class="bg-black h-[2px] w-7 transform transition-all duration-300 origin-left delay-150 hamburger-line">
             </div>
 
             <div
-              class="absolute items-center justify-between transform transition-all duration-500 top-2.5 -translate-x-10 flex w-0 hamburger-line2"
-            >
+              class="absolute items-center justify-between transform transition-all duration-500 top-2.5 -translate-x-10 flex w-0 hamburger-line2">
               <div
-                class="absolute bg-black h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300 hamburger-cross"
-              >
+                class="absolute bg-black h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300 hamburger-cross">
               </div>
               <div
-                class="absolute bg-black h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300 hamburger-cross2"
-              >
+                class="absolute bg-black h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300 hamburger-cross2">
               </div>
             </div>
           </div>
@@ -60,8 +51,7 @@ import logo from "/public/img/GF-logo.png";
       </button>
       <a
         class="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded h-10 flex items-center ml-3"
-        href="/workshop/"
-      >
+        href="/workshop/">
         Semináře
       </a>
       <Button text="Rezervace" href="https://goodfellasgym.inrs.cz/rs" />
@@ -69,11 +59,9 @@ import logo from "/public/img/GF-logo.png";
     </div>
     <div
       class="hidden w-full desktop:flex desktop:items-center desktop:w-auto order-3 desktop:order-2"
-      id="menu"
-    >
+      id="menu">
       <ul
-        class="text-base text-gray-700 pt-4 desktop:flex desktop:justify-between desktop:pt-0"
-      >
+        class="text-base text-gray-700 pt-4 desktop:flex desktop:justify-between desktop:pt-0">
         <MenuItem title="O nás" href="#aboutUs" />
         <MenuItem title="Jak začít" href="#howToStart" />
         <MenuItem title="Lekce" href="#lessons" />
@@ -88,29 +76,29 @@ import logo from "/public/img/GF-logo.png";
 </header>
 
 <script>
-  const button = document.querySelector("#menu-button"); // Hamburger Icon
-  const menu = document.querySelector("#menu"); // Menu
-  const hamburgerLine = document.querySelectorAll(".hamburger-line"); // Hamburger Lines
-  const hamburgerLine2 = document.querySelectorAll(".hamburger-line2"); // Hamburger Lines
-  const hamburgerCross = document.querySelectorAll(".hamburger-cross"); // Hamburger Lines
-  const hamburgerCross2 = document.querySelectorAll(".hamburger-cross2"); // Hamburger Lines
+  const button = document.querySelector('#menu-button') // Hamburger Icon
+  const menu = document.querySelector('#menu') // Menu
+  const hamburgerLine = document.querySelectorAll('.hamburger-line') // Hamburger Lines
+  const hamburgerLine2 = document.querySelectorAll('.hamburger-line2') // Hamburger Lines
+  const hamburgerCross = document.querySelectorAll('.hamburger-cross') // Hamburger Lines
+  const hamburgerCross2 = document.querySelectorAll('.hamburger-cross2') // Hamburger Lines
   const handleOpen = () => {
     hamburgerLine.forEach((line) => {
-      line.classList.toggle("group-focus:translate-x-10");
-    });
+      line.classList.toggle('group-focus:translate-x-10')
+    })
     hamburgerLine2.forEach((line) => {
-      line.classList.toggle("group-focus:translate-x-0");
-      line.classList.toggle("group-focus:w-12");
-    });
+      line.classList.toggle('group-focus:translate-x-0')
+      line.classList.toggle('group-focus:w-12')
+    })
     hamburgerCross.forEach((line) => {
-      line.classList.toggle("group-focus:rotate-45");
-    });
+      line.classList.toggle('group-focus:rotate-45')
+    })
     hamburgerCross2.forEach((line) => {
-      line.classList.toggle("group-focus:-rotate-45");
-    });
-    menu?.classList.toggle("hidden");
-  };
+      line.classList.toggle('group-focus:-rotate-45')
+    })
+    menu?.classList.toggle('hidden')
+  }
 
-  button?.addEventListener("click", handleOpen);
-  button?.addEventListener("blur", () => setTimeout(handleOpen, 100));
+  button?.addEventListener('click', handleOpen)
+  button?.addEventListener('blur', () => setTimeout(handleOpen, 100))
 </script>

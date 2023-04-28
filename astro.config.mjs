@@ -1,15 +1,15 @@
-import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
+import { defineConfig } from 'astro/config'
+import react from '@astrojs/react'
 // https://astro.build/config
 
 // https://astro.build/config
-import tailwind from "@astrojs/tailwind";
+import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
-import mdx from "@astrojs/mdx";
+import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
-import image from "@astrojs/image";
+import image from '@astrojs/image'
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,15 +18,15 @@ export default defineConfig({
     tailwind({
       // Example: Provide a custom path to a Tailwind config file
       config: {
-        path: "./tailwind.config.cjs",
-        applyBaseStyles: false,
-      },
+        path: './tailwind.config.cjs',
+        applyBaseStyles: false
+      }
     }),
     mdx(),
     image({
-      cacheDir: "./.cache/image",
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
+      cacheDir: './.cache/image',
+      serviceEntryPoint: '@astrojs/image/sharp'
+    })
   ],
-  base: process.env.BASENAME || "/",
-});
+  base: process.env.BASENAME || '/'
+})

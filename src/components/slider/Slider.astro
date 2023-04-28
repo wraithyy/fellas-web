@@ -1,14 +1,13 @@
 ---
-import { Image } from "@astrojs/image/components";
-import first from "/public/img/01.jpg";
-import second from "/public/img/02.jpg";
-import third from "/public/img/03.jpg";
+import { Image } from '@astrojs/image/components'
+import first from '/public/img/01.jpg'
+import second from '/public/img/02.jpg'
+import third from '/public/img/03.jpg'
 ---
 
 <div class="overflow-hidden w-full h-[900px] relative">
   <div
-    class="absolute align-middle top-[50%] -translate-y-1/2 h-72 text-center bg-black bg-opacity-60 z-10 w-full border-y-1 border-opacity-80 justify-center flex animate-[fadeInOut_12s_ease-in-out_infinite_-6s] opacity-0"
-  >
+    class="absolute align-middle top-[50%] -translate-y-1/2 h-72 text-center bg-black bg-opacity-60 z-10 w-full border-y-1 border-opacity-80 justify-center flex animate-[fadeInOut_12s_ease-in-out_infinite_-6s] opacity-0">
     <div class="prose flex prose-invert text-3xl">
       <h2 class="flex self-center">
         Vyber si trénink, který přesně padne tobě!
@@ -16,8 +15,7 @@ import third from "/public/img/03.jpg";
     </div>
   </div>
   <div
-    class="absolute top-[50%] -translate-y-1/2 h-72 text-center bg-black bg-opacity-60 z-10 w-full border-y-1 border-opacity-80 justify-center flex animate-[fadeInOut_12s_ease-in-out_infinite] opacity-1"
-  >
+    class="absolute top-[50%] -translate-y-1/2 h-72 text-center bg-black bg-opacity-60 z-10 w-full border-y-1 border-opacity-80 justify-center flex animate-[fadeInOut_12s_ease-in-out_infinite] opacity-1">
     <div class="prose flex prose-invert text-3xl">
       <h2 class="flex self-center">
         Kondiční cvičení, silovka(powerbuilding), vzpírání, jóga, lekce pro
@@ -30,7 +28,7 @@ import third from "/public/img/03.jpg";
     alt="first"
     class="w-full object-cover object-center h-[900px] absolute top-0 left-0 animate-[fadeInOut_15s_ease-in-out_infinite_-9s] opacity-1"
     format="webp"
-    loading={"eager"}
+    loading={'eager'}
   />
   <Image
     src={second}

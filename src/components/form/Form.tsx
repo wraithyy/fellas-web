@@ -1,4 +1,4 @@
-import { Input } from "./Input";
+import { Input } from './Input'
 
 export const Form = () => {
   return (
@@ -14,13 +14,12 @@ export const Form = () => {
           <div className="flex">
             <button
               className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline"
-              type="submit"
-            >
+              type="submit">
               Odeslat
             </button>
           </div>
         </div>
       </form>
     </div>
-  );
-};
+  )
+}
