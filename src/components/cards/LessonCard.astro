@@ -11,6 +11,9 @@ interface Props {
   item: CollectionEntry<"lessons">;
 }
 const {item} = Astro.props;
+const {Content} = await item.render()
+
+
 
 ---
 
@@ -25,6 +28,7 @@ const {item} = Astro.props;
         width={400}
         height={300}
         alt={item?.data?.alt}
+
       />
     </div>
     <div class="p-5">
@@ -32,14 +36,16 @@ const {item} = Astro.props;
         {item?.data?.description}
       </p>
       <div class="flex justify-center">
-        <Dialog id={item?.data?.slug} open="Více info">
-          <main slot="main">
-            <slot />
+        <Dialog class="backdrop-blur-sm" id={item?.data?.slug} open="Více info">
+          <main class="[&>h1]:text-black" slot="main">
+           <Content />
           </main>
+        
           <button
-            class="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded h-10 flex items-center text-center no-underline ml-3"
-            slot="close">Close Dialog</button
+            class="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded h-10 flex justify-center text-center no-underline ml-3"
+            slot="close">Zavři info</button
           >
+        
         </Dialog>
       </div>
     </div>

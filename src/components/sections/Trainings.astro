@@ -1,1 +1,14 @@
-<div class="flex p-5 bg-black">blablabla</div>
+---
+import { getCollection } from 'astro:content'
+const funkcniFitness = await getCollection('lessons')
+---
+{
+    funkcniFitness
+      .sort((a, b) => a.data.order - b.data.order)
+      .map((item) => {
+        return (
+        <div class="prose prose-invert flex p-5 bg-black">{item?.body}</div>
+        )
+      })
+  }
+

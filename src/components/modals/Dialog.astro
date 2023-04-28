@@ -1,15 +1,18 @@
 ---
 const { id, open } = Astro.props;
+
+const showModal = `window.${id}.showModal()`
+
 ---
 
 <button
   class="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded h-10 flex items-center text-center no-underline ml-3"
-  onclick={`window.${id}.showModal()`}>{open}</button
+  onclick={showModal}>{open}</button
 >
 
-<dialog class="fixed bottom-[50%] backdrop-blur-sm" id={id}>
+<dialog class="fixed bottom-[50%]  max-w-md " id={id}>
   <slot name="main" />
-  <form method="dialog">
+  <form class="flex justify-center" method="dialog">
     <slot name="close" />
   </form>
 </dialog>
