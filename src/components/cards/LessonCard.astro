@@ -1,15 +1,20 @@
 ---
 import { Image } from '@astrojs/image/components'
 
-import { Button } from '../Button'
-interface Props {
-  title: string
-  description: string
-  image: string
-  alt: string
-}
+import { Button } from "../Button";
 
-const { title, description, image, alt } = Astro.props
+import type { CollectionEntry } from 'astro:content';
+
+import Dialog from '../modals/Dialog.astro';
+
+interface Props {
+  item: CollectionEntry<"lessons">;
+}
+const {item} = Astro.props;
+const {Content} = await item.render()
+
+
+
 ---
 
 <div
@@ -18,19 +23,30 @@ const { title, description, image, alt } = Astro.props
     <div class="overflow-hidden">
       <Image
         class="object-fill group-hover:scale-125 ease-in-out duration-300 m-0"
-        src={image}
+        src={item?.data?.image}
         aspectRatio={1}
         width={400}
         height={300}
-        alt={alt}
+        alt={item?.data?.alt}
+
       />
     </div>
     <div class="p-5">
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-        {description}
+        {item?.data?.description}
       </p>
       <div class="flex justify-center">
-        <Button text="Více info" />
+        <Dialog class="backdrop-blur-sm" id={item?.data?.slug} open="Více info">
+          <main class="[&>h1]:text-black" slot="main">
+           <Content />
+          </main>
+        
+          <button
+            class="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded h-10 flex justify-center text-center no-underline ml-3"
+            slot="close">Zavři info</button
+          >
+        
+        </Dialog>
       </div>
     </div>
   </>
